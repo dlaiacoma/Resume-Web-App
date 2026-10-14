@@ -79,6 +79,19 @@ export interface CharacterSheetRow {
   progress: number;
 }
 
+export interface HobbyLink {
+  label: string;
+  href: string;
+}
+
+interface HobbyBase {
+  title: string;
+  icon: IconName;
+  body: string;
+  /** Optional outbound link shown under the card text. */
+  link?: HobbyLink;
+}
+
 export type Hobby =
-  | { kind: 'photo'; title: string; icon: IconName; body: string; photo: Photo }
-  | { kind: 'sheet'; title: string; icon: IconName; body: string; rows: CharacterSheetRow[] };
+  | (HobbyBase & { kind: 'photo'; photo: Photo })
+  | (HobbyBase & { kind: 'sheet'; rows: CharacterSheetRow[]; handle?: string });

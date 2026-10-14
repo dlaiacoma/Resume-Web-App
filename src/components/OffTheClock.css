@@ -60,6 +60,20 @@
   color: var(--on-dark-2);
   font-size: 15px;
 }
+.hobby-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--warm);
+  text-underline-offset: 3px;
+}
+.hobby-link:hover {
+  color: #ffc49e;
+}
 .sheet {
   aspect-ratio: 4 / 5;
   background: #1a2620;

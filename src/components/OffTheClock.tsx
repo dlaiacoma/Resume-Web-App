@@ -21,10 +21,10 @@ function HobbyPhoto({ photo }: { photo: Photo }) {
   );
 }
 
-function CharacterSheet({ rows }: { rows: CharacterSheetRow[] }) {
+function CharacterSheet({ rows, handle }: { rows: CharacterSheetRow[]; handle?: string }) {
   return (
     <div className="sheet" role="img" aria-label="A playful character sheet with every stat at level 99">
-      <div className="prompt">&gt; character sheet</div>
+      <div className="prompt">&gt; {handle ? `${handle} · character sheet` : 'character sheet'}</div>
       {rows.map((r) => (
         <div key={r.label} className="sheet-row">
           <div className="row">
@@ -43,13 +43,23 @@ function CharacterSheet({ rows }: { rows: CharacterSheetRow[] }) {
 function HobbyCard({ hobby }: { hobby: Hobby }) {
   return (
     <article className="hobby">
-      {hobby.kind === 'photo' ? <HobbyPhoto photo={hobby.photo} /> : <CharacterSheet rows={hobby.rows} />}
+      {hobby.kind === 'photo' ? (
+        <HobbyPhoto photo={hobby.photo} />
+      ) : (
+        <CharacterSheet rows={hobby.rows} handle={hobby.handle} />
+      )}
       <div className="stack hobby-body">
         <div className="hobby-title">
           <Icon name={hobby.icon} size={22} className="hobby-icon" />
           <h3>{hobby.title}</h3>
         </div>
         <p>{hobby.body}</p>
+        {hobby.link && (
+          <a href={hobby.link.href} className="hobby-link" target="_blank" rel="noopener noreferrer">
+            {hobby.link.label}
+            <Icon name="arrow" size={16} />
+          </a>
+        )}
       </div>
     </article>
   );

@@ -44,6 +44,8 @@ export const hobbies: Hobby[] = [
     title: 'Old School RuneScape',
     icon: 'pickaxe',
     body: 'A long-time grind I still love, and proof that patience and a good plan pay off.',
+    handle: 'davvn',
+    link: { label: 'My real stats on Wise Old Man', href: 'https://wiseoldman.net/players/davvn' },
     rows: [
       { label: 'Java', level: '99', progress: 100 },
       { label: 'Fatherhood', level: '99', progress: 100 },
