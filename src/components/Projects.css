@@ -1,0 +1,89 @@
+.band {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.proj-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 600;
+}
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+  gap: 20px;
+}
+.feature {
+  background: var(--night);
+  color: var(--on-dark);
+  border-radius: 18px;
+  padding: 32px;
+  gap: 14px;
+}
+.feature .meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--on-dark-3);
+}
+.feature h3 {
+  font-size: 30px;
+  line-height: 1.15;
+  color: #fff;
+}
+.feature p {
+  color: var(--on-dark-2);
+  font-size: 16px;
+}
+.feature .tags {
+  margin-top: 0;
+  padding-top: 6px;
+}
+.repo-col {
+  gap: 20px;
+}
+.repo {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  gap: 8px;
+  background: var(--surface-2);
+  transition: border-color 0.15s ease;
+}
+.repo:hover {
+  border-color: var(--ink);
+}
+.repo .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.repo strong {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 21px;
+}
+.repo .desc {
+  color: var(--ink-2);
+  font-size: 16px;
+}
+@media (max-width: 720px) {
+  .feature {
+    padding: 24px;
+  }
+}

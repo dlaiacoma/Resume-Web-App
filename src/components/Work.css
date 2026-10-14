@@ -1,0 +1,49 @@
+.work-jobs {
+  gap: 96px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  gap: 12px;
+}
+.card .kicker {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.card h3 {
+  font-size: 23px;
+  line-height: 1.25;
+}
+.card p {
+  color: var(--ink-2);
+  font-size: 16px;
+}
+.lead-strip {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 28px;
+}
+.lead-strip .stack {
+  gap: 6px;
+}
+.lead-strip strong {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 19px;
+}
+.lead-strip span {
+  color: var(--ink-2);
+  font-size: 16px;
+}

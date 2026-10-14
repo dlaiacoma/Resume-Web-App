@@ -1,0 +1,39 @@
+# Checks that the site builds on every branch push and pull request,
+# so problems are caught before anything reaches main and goes live.
+name: CI
+
+on:
+  push:
+    branches-ignore: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+      - name: Build (typecheck, bundle, prerender)
+        run: npm run build
+      - name: Check prerendered content
+        run: |
+          grep -q "Evernorth Health Services" dist/index.html
+          grep -q "Old School RuneScape" dist/index.html
+          test -f dist/CNAME && test -f dist/Davin-LaIacoma-Resume.pdf && test -f dist/img/dad-ktm.webp
+          echo "Prerendered HTML and static assets look good."
+      - name: Upload build for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+          retention-days: 7

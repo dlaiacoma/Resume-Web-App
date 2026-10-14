@@ -1,0 +1,35 @@
+/* Design tokens. Change colors and type here; components read these variables. */
+:root {
+  --ground: #f3f2ee;
+  --surface: #ffffff;
+  --surface-2: #f8f7f3;
+  --chip: #eeece5;
+
+  --ink: #15201a;
+  --ink-2: #3f4a44;
+  --ink-3: #5a6560;
+
+  --line: #dad8d0;
+  --line-2: #c9c6bb;
+
+  --accent: #c2410c;
+  --accent-hover: #a9380a;
+
+  --night: #15201a;
+  --night-2: #1f2e26;
+  --night-line: #2c3d33;
+
+  --forest: #17231d;
+  --forest-card: #213129;
+  --forest-tile: #2c3f35;
+
+  --on-dark: #e8ebe6;
+  --on-dark-2: #c3cdc7;
+  --on-dark-3: #a9b5ae;
+  --warm: #f0a374;
+  --ok: #7fd1a3;
+
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --body: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
