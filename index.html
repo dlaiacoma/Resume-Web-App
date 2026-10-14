@@ -130,14 +130,15 @@ svg{flex-shrink:0}
 .forest .sec-head .sub{color:#B9C4BD}
 .hobby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
 .hobby{background:var(--forest-card);border-radius:16px;overflow:hidden}
-.hobby-art{aspect-ratio:4/3;background:var(--forest-tile);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hobby-art svg.big{width:46%;height:auto;color:var(--warm);opacity:.95}
-.hobby-art .ridge{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;opacity:.5}
+.hobby-art{aspect-ratio:4/5;background:var(--forest-tile);overflow:hidden}
+.hobby-art picture{display:block;height:100%}
+.hobby-art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.hobby:hover .hobby-art img{transform:scale(1.03)}
 .hobby-body{padding:22px;gap:8px}
 .hobby-title{display:flex;align-items:center;gap:10px}
 .hobby h3{font-size:21px;color:#fff}
 .hobby p{color:var(--on-dark-2);font-size:15px}
-.sheet{aspect-ratio:4/3;background:#1A2620;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:9px;font-family:var(--mono);font-size:13px;color:var(--on-dark-2)}
+.sheet{aspect-ratio:4/5;background:#1A2620;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:9px;font-family:var(--mono);font-size:13px;color:var(--on-dark-2)}
 .sheet .prompt{color:var(--warm)}
 .sheet .row{display:flex;justify-content:space-between}
 .sheet .row b{color:#fff;font-weight:500}
@@ -169,7 +170,7 @@ footer{border-top:1px solid var(--line)}
   .impact{padding:20px}
   .feature{padding:24px}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hobby:hover .hobby-art img{transform:none}.btn{transition:none}.btn:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -208,7 +209,7 @@ footer{border-top:1px solid var(--line)}
       <div class="status"><span class="dot" aria-hidden="true"></span>Open to senior &amp; lead roles · Stanhope, NJ</div>
       <h1>Davin LaIacoma</h1>
       <p class="lede">Senior Software Engineer &amp; Team Lead building backend systems that healthcare runs on.</p>
-      <p class="intro">Nine years of Java and Spring Boot at Evernorth (Cigna / Express Scripts): high-volume REST services, distributed integrations, and centralized security, plus an AI-enabled engineering tool I built solo. Off the keyboard you'll find me on a trail, on a ski slope, or with my kids.</p>
+      <p class="intro">Nine years of Java and Spring Boot at Evernorth (Cigna / Express Scripts): high-volume REST services, distributed integrations, and centralized security, plus an AI-enabled engineering tool I built solo. Off the keyboard you'll find me on a trail, on a ski slope, or with my daughter.</p>
       <div class="cta-row">
         <a href="Davin-LaIacoma-Resume.pdf" class="btn btn-dark" download>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 14h6"/><path d="M9 17h4"/></svg>
@@ -340,36 +341,29 @@ footer{border-top:1px solid var(--line)}
     <div class="hobby-grid">
 
       <article class="hobby">
-        <div class="hobby-art" aria-hidden="true">
-          <svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="3"/><circle cx="17" cy="10" r="2"/><path d="M4 21v-3a5 5 0 0 1 10 0v3"/><path d="M14 21v-2a3 3 0 0 1 6 0v2"/></svg>
-        </div>
+        <div class="hobby-art"><picture><source srcset="img/dad-ktm.webp" type="image/webp"><img src="img/dad-ktm.jpg" alt="Davin and his daughter giving a thumbs up on his orange dirt bike" loading="lazy" decoding="async" style="object-position:50% 35%"></picture></div>
         <div class="stack hobby-body">
           <div class="hobby-title">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0A374" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
             <h3>Dad first</h3>
           </div>
-          <p>The most important job I have, and the best training in patience and prioritization I've found.</p>
+          <p>The most important job I have. My favorite riding buddy is already in training.</p>
         </div>
       </article>
 
       <article class="hobby">
-        <div class="hobby-art" aria-hidden="true">
-          <svg class="ridge" viewBox="0 0 200 60" preserveAspectRatio="none" fill="none" stroke="#F0A374" stroke-width="1"><path d="M0 50 C 30 30, 50 55, 80 40 S 130 20, 160 38 S 190 45, 200 35"/><path d="M0 58 C 40 42, 70 60, 100 50 S 150 36, 200 48"/></svg>
-          <svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="16" r="3.5"/><circle cx="19" cy="16" r="3.5"/><path d="M5 16l4-7h5l5 7"/><path d="M12 9l-2-4H8"/><path d="M14 9l2-3h3"/></svg>
-        </div>
+        <div class="hobby-art"><picture><source srcset="img/trail-ride.webp" type="image/webp"><img src="img/trail-ride.jpg" alt="Davin smiling with his mountain bike on a wooded trail" loading="lazy" decoding="async" style="object-position:50% 18%"></picture></div>
         <div class="stack hobby-body">
           <div class="hobby-title">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0A374" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12l4-4"/><path d="M12 3v2"/><path d="M3 12h2"/><path d="M19 12h2"/></svg>
-            <h3>Dirt bikes</h3>
+            <h3>On the trails</h3>
           </div>
-          <p>Trail riding on a 2026 KTM 250 XC. Roots, rocks and mud are the best debugging break there is.</p>
+          <p>Dirt bike days on a 2026 KTM 250 XC, mountain bike when I want to earn the climb. Roots and rocks are the best debugging break there is.</p>
         </div>
       </article>
 
       <article class="hobby">
-        <div class="hobby-art" aria-hidden="true">
-          <svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20l7-12 4 6 3-4 6 10z"/><path d="M7.4 10.8l1.6 1.4 1.6-1.4"/><path d="M5 22l14-4"/></svg>
-        </div>
+        <div class="hobby-art"><picture><source srcset="img/ski-summit.webp" type="image/webp"><img src="img/ski-summit.jpg" alt="Ski selfie with mirrored goggles above snow-covered trees and mountains" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></div>
         <div class="stack hobby-body">
           <div class="hobby-title">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0A374" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="M4.9 4.9l14.2 14.2"/><path d="M2 12h20"/><path d="M19.1 4.9L4.9 19.1"/></svg>
