@@ -8,7 +8,7 @@ export const profile: Profile = {
   availability: 'Open to senior & lead roles',
   tagline: 'Senior Software Engineer & Team Lead building backend systems that healthcare runs on.',
   intro:
-    "Nine years of Java and Spring Boot at Evernorth (Cigna / Express Scripts): high-volume REST services, distributed integrations, and centralized security, plus an AI-enabled engineering tool I built solo. Off the keyboard you'll find me on a trail, on a ski slope, or with my daughter.",
+    "Nine years of Java and Spring Boot at Evernorth (Cigna / Express Scripts): high-volume REST services, distributed integrations, and centralized security, plus an AI-enabled engineering tool I built solo. Off the keyboard you'll find me on a trail, on a ski slope, or with my kids.",
   email: 'd.laiacoma@gmail.com',
   resumeHref: '/Davin-LaIacoma-Resume.pdf',
   links: {
